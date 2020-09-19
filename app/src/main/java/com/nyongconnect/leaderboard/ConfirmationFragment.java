@@ -1,5 +1,6 @@
 package com.nyongconnect.leaderboard;
 
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -81,7 +82,6 @@ public class ConfirmationFragment extends DialogFragment {
                         dialog.show(getFragmentManager(), "Submission Successful");
                         dismiss();
                     }
-
                     @Override
                     public void onFailure(Call<FormField> call, Throwable t) {
                         SubmissionFailedFragment dialog2  = SubmissionFailedFragment.newInstance();
